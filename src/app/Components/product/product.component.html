@@ -1,0 +1,15 @@
+<p>Product</p>
+<br>
+<form [formGroup]="productIdFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="productId" [placeholder]="PlaceholderProductId"/>
+  <button [disabled]="!productIdFormGroup.valid">Get product</button>
+</form>
+<br>
+<ng-container *ngIf="product.id != undefined">
+  <div>Product Id: {{product.id}}</div>
+  <div>Name: {{product.name}}</div>
+  <div>Code: {{product.code}}</div>
+  <div>Description: {{product.description}}</div>
+  <div>Url Picture: {{product.urlPicture}}</div>
+  <div>Price: {{product.price}}</div>
+</ng-container>

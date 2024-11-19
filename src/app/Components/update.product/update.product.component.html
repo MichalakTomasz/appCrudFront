@@ -1,0 +1,13 @@
+<p>Update product</p>
+<br>
+<form [formGroup]="updateProductFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="id" [placeholder]="idPlaceholder"/>
+  <input formControlName="name" [placeholder]="namePlaceholder"/>
+  <input formControlName="code" [placeholder]="codePlaceholder"/>
+  <input formControlName="description" [placeholder]="descriptionPlaceholder"/>
+  <input formControlName="urlPicture" [placeholder]="urlPicturePlaceholder"/>
+  <input formControlName="price" [placeholder]="pricePlaceholder"/>
+  <button [disabled]="!updateProductFormGroup.valid">Update</button>
+</form>
+<br>
+<div>{{updateResult}}</div>

@@ -1,0 +1,12 @@
+<p>Add product</p>
+<br>
+<form [formGroup]="addProductFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="name" [placeholder]="namePlaceholder"/>
+  <input formControlName="code" [placeholder]="codePlaceholder"/>
+  <input formControlName="description" [placeholder]="descriptionPlaceholder"/>
+  <input formControlName="urlPicture" [placeholder]="urlPicturePlaceholder"/>
+  <input formControlName="price" [placeholder]="pricePlaceholder"/>
+  <button [disabled]="!addProductFormGroup.valid">Add</button>
+</form>
+<br>
+<div>{{addResult}}</div>

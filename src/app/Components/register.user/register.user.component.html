@@ -1,0 +1,10 @@
+<p>Register user</p>
+<br>
+<form [formGroup]="addUserFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="email" [placeholder]="emailPlaceholder"/>
+  <input formControlName="password" [placeholder]="passwordPlaceholder" type="password"/>
+  <br>
+  <button [disabled]="!addUserFormGroup.valid">Register</button>
+</form>
+<br>
+<div *ngIf="registerUserResult.length > 0">{{registerUserResult}}</div>

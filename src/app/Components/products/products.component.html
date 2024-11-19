@@ -1,0 +1,13 @@
+<p>Products</p>
+<br>
+<ul>
+  <ng-container *ngFor="let product of products">
+    <li>
+      <div>Product Id: {{product?.id}}</div>
+      <div>Code: {{product?.code}}</div>
+      <div>Description: {{product?.description}}</div>
+      <div>Url Pisture: {{product?.urlPicture}}</div>
+      <div>Price: {{product?.price}}</div>
+    </li>
+  </ng-container>
+</ul>

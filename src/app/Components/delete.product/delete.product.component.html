@@ -1,0 +1,8 @@
+<p>Delete product</p>
+<br>
+<form [formGroup]="deleteFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="id" [placeholder]="idPlaceholder" />
+  <button [disabled]="!deleteFormGroup.valid">delete Product</button>
+</form>
+<br>
+<div>{{deleteResult}}</div>

@@ -1,0 +1,9 @@
+
+<div>
+  <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+    <input formControlName="emailForm" [placeholder]="emailPlaceholder" />
+    <input formControlName="passwordForm" [placeholder]="passwordPlaceholder" type="password" />
+    <button [disabled]="!loginFormGroup.valid">login</button>
+  </form>
+</div>
+

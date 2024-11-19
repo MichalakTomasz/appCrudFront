@@ -1,0 +1,7 @@
+<p>Delete account</p>
+<br>
+<form [formGroup]="deleteUserFormGroup" (ngSubmit)="onSubmit()">
+  <input formControlName="id" [placeholder]="idPladeholder"/>
+  <button [disabled]="!deleteUserFormGroup.valid">Delete user</button>
+</form>
+<div *ngIf="deleteUserResult.length > 0">{{deleteUserResult}}</div>
