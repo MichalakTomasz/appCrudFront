@@ -1,13 +1,13 @@
 import { ControllerService } from './../../Services/controller.service';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-delete.product',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './delete.product.component.html',
-  styleUrl: './delete.product.component.css'
+    selector: 'app-delete.product',
+    imports: [ReactiveFormsModule, MaterialModule],
+    templateUrl: './delete.product.component.html',
+    styleUrl: './delete.product.component.css'
 })
 export class DeleteProductComponent {
   baseUrl = 'https://localhost:7174/product/';

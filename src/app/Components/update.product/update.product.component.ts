@@ -2,13 +2,13 @@ import { ControllerService } from './../../Services/controller.service';
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { Product } from '../../Models/Product';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-update.product',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './update.product.component.html',
-  styleUrl: './update.product.component.css'
+    selector: 'app-update.product',
+    imports: [ReactiveFormsModule, MaterialModule],
+    templateUrl: './update.product.component.html',
+    styleUrl: './update.product.component.css'
 })
 export class UpdateProductComponent {
   baseUrl = 'https://localhost:7174/product/';

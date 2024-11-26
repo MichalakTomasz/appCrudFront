@@ -1,4 +1,6 @@
-a:hover
-{
-  color: red;
+app-menu{
+  width: 100%;
+}
+.content{
+  width: 100%;
 }

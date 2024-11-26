@@ -5,16 +5,21 @@ import { UserService } from './Services/user.service';
 import { MenuComponent } from "./Components/menu/menu.component";
 import { AuthResult } from './Models/AuthResult';
 import { UserComponent } from "./Components/user/user.component";
+import { MaterialModule } from './material/material.module';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterModule, MenuComponent, UserComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  providers: [
-    ControllerService
-  ]
+    selector: 'app-root',
+    imports: [
+      RouterOutlet,
+      RouterModule,
+      MenuComponent,
+      UserComponent,
+      MaterialModule],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    providers: [
+        ControllerService
+    ]
 })
 export class AppComponent implements OnInit{
   title = 'Cloud Academy - Backend developer';

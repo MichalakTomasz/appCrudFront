@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { Product } from '../../Models/Product';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-get.product',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.css'
+    selector: 'app-get.product',
+    imports: [ReactiveFormsModule, CommonModule, MaterialModule],
+    templateUrl: './product.component.html',
+    styleUrl: './product.component.css'
 })
 export class ProductComponent{
   baseUrl = 'https://localhost:7174/product/';

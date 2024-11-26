@@ -3,13 +3,13 @@ import { UserService } from './../../Services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../../Models/MenuItem';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-menu',
-  standalone: true,
-  imports: [RouterModule, CommonModule],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+    selector: 'app-menu',
+    imports: [RouterModule, CommonModule, MaterialModule],
+    templateUrl: './menu.component.html',
+    styleUrl: './menu.component.css'
 })
 export class MenuComponent implements OnInit {
   menuItems? :Array<MenuItem>;
@@ -22,6 +22,7 @@ export class MenuComponent implements OnInit {
         if (u.roles?.includes('Admin')){
           this.menuItems =
           [
+            { name: 'Home', path: 'home'},
             { name: 'Login', path: 'auth'},
             { name: 'Products', path: "products" },
             { name: 'Product', path: "product" },
@@ -35,6 +36,7 @@ export class MenuComponent implements OnInit {
         else if (u.roles?.includes('Guest')){
           this.menuItems =
           [
+            { name: 'Home', path: 'home' },
             { name: 'Login', path: 'auth'},
             { name: 'Products', path: 'products' },
             { name: 'Product', path: 'product' },

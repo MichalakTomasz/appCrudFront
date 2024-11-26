@@ -1,10 +1,36 @@
-<p>Register user</p>
-<br>
-<form [formGroup]="addUserFormGroup" (ngSubmit)="onSubmit()">
-  <input formControlName="email" [placeholder]="emailPlaceholder"/>
-  <input formControlName="password" [placeholder]="passwordPlaceholder" type="password"/>
-  <br>
-  <button [disabled]="!addUserFormGroup.valid">Register</button>
-</form>
-<br>
-<div *ngIf="registerUserResult.length > 0">{{registerUserResult}}</div>
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <p>User</p>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="addUserFormGroup" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="email"
+          [placeholder]="emailPlaceholder"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          formControlName="password"
+          [placeholder]="passwordPlaceholder"
+          type="password"
+        />
+      </mat-form-field>
+      <button mat-stroked-button [disabled]="!addUserFormGroup.valid">
+        Register
+      </button>
+      <br>
+      <div>Wymagania hasła:</div>
+      <div>Minimalna długość: {{passwordPolicy.requiredLength}}</div>
+      <div *ngIf="passwordPolicy.requireNonAlphanumeric">Wymagany znak</div>
+      <div *ngIf="passwordPolicy.requireDigit">Wymagana cyfra</div>
+      <div *ngIf="passwordPolicy.requireLowercase">Wymagana mała litera</div>
+      <div *ngIf="passwordPolicy.requireUppercase">Wymagana duża litera</div>
+    </form>
+    <br />
+    <div *ngIf="registerUserResult.length > 0">{{ registerUserResult }}</div>
+  </mat-card-content>
+</mat-card>

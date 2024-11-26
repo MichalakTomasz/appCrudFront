@@ -1,7 +1,15 @@
-<p>Delete account</p>
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <p>Delete Account</p>
+  </mat-card-header>
 <br>
-<form [formGroup]="deleteUserFormGroup" (ngSubmit)="onSubmit()">
-  <input formControlName="id" [placeholder]="idPladeholder"/>
-  <button [disabled]="!deleteUserFormGroup.valid">Delete user</button>
-</form>
-<div *ngIf="deleteUserResult.length > 0">{{deleteUserResult}}</div>
+<mat-card-content>
+  <form [formGroup]="deleteUserFormGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput formControlName="id" [placeholder]="idPladeholder"/>
+    </mat-form-field>
+    <button mat-stroked-button [disabled]="!deleteUserFormGroup.valid">Delete user</button>
+  </form>
+  <div *ngIf="deleteUserResult.length > 0">{{deleteUserResult}}</div>
+</mat-card-content>
+</mat-card>

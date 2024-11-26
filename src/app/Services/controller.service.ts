@@ -7,6 +7,7 @@ import { AuthModel } from '../Models/AuthModel';
 import { AuthType } from '../Models/AuthType';
 import { AuthResult } from '../Models/AuthResult';
 import { Product } from '../Models/Product';
+import { PasswordPolicy } from '../Models/PasswordPolicy';
 
 @Injectable({
   providedIn: 'root'
@@ -57,5 +58,9 @@ export class ControllerService
 
   deleteUser(url: string, guidRequest : GuidRequest) : Observable<boolean>{
     return this.http.delete<boolean>(url, { body : guidRequest});
+  }
+
+  getPasswordPolicy(url: string) : Observable<PasswordPolicy>{
+    return this.http.get<PasswordPolicy>(url);
   }
 }

@@ -3,13 +3,13 @@ import { ControllerService } from './../../Services/controller.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-delete.user',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './delete.user.component.html',
-  styleUrl: './delete.user.component.css'
+    selector: 'app-delete.user',
+    imports: [ReactiveFormsModule, CommonModule, MaterialModule],
+    templateUrl: './delete.user.component.html',
+    styleUrl: './delete.user.component.css'
 })
 export class DeleteUserComponent {
   baseUrl = 'https://localhost:7174/auth/deleteaccount/';

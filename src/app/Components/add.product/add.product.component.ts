@@ -1,16 +1,14 @@
-import { join } from 'node:path';
 import { ControllerService } from './../../Services/controller.service';
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { Product } from '../../Models/Product';
-import { error } from 'console';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-add.product',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './add.product.component.html',
-  styleUrl: './add.product.component.css'
+    selector: 'app-add.product',
+    imports: [ReactiveFormsModule, MaterialModule],
+    templateUrl: './add.product.component.html',
+    styleUrl: './add.product.component.css'
 })
 export class AddProductComponent {
   baseUrl = 'https://localhost:7174/product/';

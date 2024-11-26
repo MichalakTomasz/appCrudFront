@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ControllerService } from '../../Services/controller.service';
 import { UserService } from '../../Services/user.service';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
-  selector: 'app-auth',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './auth.component.html',
-  styleUrl: './auth.component.css'
+    selector: 'app-auth',
+    imports: [ReactiveFormsModule, MaterialModule],
+    templateUrl: './auth.component.html',
+    styleUrl: './auth.component.css'
 })
 export class AuthComponent
 {
