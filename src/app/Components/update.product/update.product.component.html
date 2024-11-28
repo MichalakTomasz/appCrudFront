@@ -20,11 +20,11 @@
       <input matInput formControlName="urlPicture" [placeholder]="urlPicturePlaceholder"/>
     </mat-form-field>
     <mat-form-field>
-      <input matInput formControlName="urlPicture" [placeholder]="urlPicturePlaceholder"/>
+      <input matInput formControlName="price" [placeholder]="pricePlaceholder"/>
     </mat-form-field>
     <button mat-stroked-button [disabled]="!updateProductFormGroup.valid">Update</button>
   </form>
   <br>
-  <div>{{updateResult}}</div>
+  <div class="commonTextColor">{{updateResult}}</div>
 </mat-card-content>
 </mat-card>

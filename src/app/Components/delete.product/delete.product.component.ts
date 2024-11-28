@@ -20,7 +20,7 @@ export class DeleteProductComponent {
   onSubmit(){
     this.controllerService.deleteProduct(this.baseUrl, this.deleteFormGroup.controls.id.value ?? 0)
     .subscribe({
-      next : () => this.deleteResult = 'Update product successful',
+      next : () => this.deleteResult = 'Delete product successful',
       error : e => {
         if (e.error){
           if (Array.isArray(e.error)){

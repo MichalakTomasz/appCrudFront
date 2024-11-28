@@ -10,6 +10,6 @@
     </mat-form-field>
     <button mat-stroked-button [disabled]="!deleteUserFormGroup.valid">Delete user</button>
   </form>
-  <div *ngIf="deleteUserResult.length > 0">{{deleteUserResult}}</div>
+  <div *ngIf="deleteUserResult.length > 0" class="commonTextColor">{{deleteUserResult}}</div>
 </mat-card-content>
 </mat-card>
