@@ -4,4 +4,5 @@ export class AuthResult
   token? : string
   roles? : Array<string>
   isAuthorized : boolean = false
+  expiration? : Date
 }
